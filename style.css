@@ -1,0 +1,389 @@
+/*titulos que este en el fondo verde*/
+.titulo{
+    color: whitesmoke;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+/*el cuerpo de cada una de las paginas*/
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/*la barra de navegacio*/
+.Barra_Navegacion {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #a6d7a8;
+}
+/*letras de la barra*/
+.Barra_Navegacion .parte{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Barra_Navegacion .parte:hover{
+    color: #4CAF50;
+}
+
+/*titulos de los archivos*/
+.Titulares{
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*seccion de quienes somos*/
+.quienes_somos{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    flex-direction: column; 
+    align-items: center;    
+    margin: 20px;
+}
+
+.imagen_inicial{
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/*mision y vison*/
+.vision-mision{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    gap: 20px;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.mision{
+    background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+    width: 50%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+    background-image: url("trabajo.jpg");
+}
+/*animacion de mision*/
+.mision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(56, 142, 60, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.mision:hover::before {
+    opacity: 1;
+}
+
+.mision:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(76, 175, 80, 0.3);
+    background: linear-gradient(135deg, #d4edda, #e8f5e8);
+}
+
+.vision{
+    background: linear-gradient(135deg, #e3f2fd, #f1f8ff);
+    width: 50%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+}
+/*animacion de vision*/
+.vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(25, 118, 210, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.vision:hover::before {
+    opacity: 1;
+}
+
+.vision:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(33, 150, 243, 0.3);
+    background: linear-gradient(135deg, #bbdefb, #e3f2fd);
+}
+/*el cubo donde se encuentran la informacion*/
+.cubo{
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.mision .cubo h1 {
+    color: #2e7d32;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.mision:hover .cubo{
+    color: #1b5e20;
+    transform: translateX(10px);
+    text-shadow: 2px 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+.vision .cubo h1 {
+    color: #1976d2;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.vision:hover .cubo{
+    color: #0d47a1;
+    transform: translateX(10px);
+    text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.3);
+}
+
+.cubo p {
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+}
+
+.mision .cubo:hover p {
+    color: #2e7d32;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.vision .cubo:hover p {
+    color: #1976d2;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+/*colores de las caracteristicas del cemaforo*/
+.rojo{
+    color: red;
+}
+
+.amarillo{
+    color: gold;
+}
+
+.verde{
+    color: greenyellow;
+}
+/*datos del registro*/
+.registro{
+    display: flex;
+    flex-wrap: wrap; /* Permite que se acomode en móviles */
+    gap: 20px;
+    justify-content: center;
+}
+
+/*formulario de mensaje*/
+.Formulario{
+    margin-right: auto;
+    margin-left: 40px;
+    margin: 20px;
+    padding: 20px;
+    border: solid #a6d7a8;
+
+}
+/*donde estan posicionados los contactos*/
+.Contactos, .Formulario {
+    width: 100%;
+    max-width: 600px; /* Que no se estiren demasiado */
+    box-sizing: border-box;
+}
+
+.Contactos{
+    margin: 20px;
+    display: inline-block;
+    padding: 20px;
+    border: solid green;
+}
+
+input{
+    padding: 20px;
+    width: 320px;
+}
+
+textarea{
+    width: 360px;
+}
+
+.mensaje{
+    padding: 70px;
+    width: 190px;
+    display: flex;
+}
+/*boton de enviar*/
+button{
+    padding: 11px;
+    width: 370px;
+}
+
+.datos{
+    display: flex;
+    justify-content: space-around;
+    border: solid #a6d7a8;
+}
+
+h4{
+    color:#2e7d32;
+    margin: 0 19px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px;
+}
+/*posicion de los datos y su registro*/
+.datos_registro, .dato{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    color:#2e7d32;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li{
+    color: #333;
+}
+
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+/*imagenes*/
+.imagen{
+    max-width: 100%;
+    height: auto;
+}
+/*titulo de la imagen*/
+.pro{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    margin-inline-start: auto
+}
+/*encabezados*/
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+/*secciones*/
+section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a{
+    color:white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+/*color de los titulos*/
+h1, h2, h3 {
+    color: #388E3C;
+}
+/*parte baja de la pagina*/
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .vision-mision {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mision, .vision {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .Barra_Navegacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .parte {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
